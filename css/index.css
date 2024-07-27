@@ -67,6 +67,67 @@ nav {
   gap: var(--gap-medium);
 }
 
+nav {
+  background: var(--accent-color);
+  box-shadow: 0 4px 6px var(--box-shadow-color);
+  margin-top: -20px;
+  border-radius: 8px;
+  padding: var(--padding-small);
+  position: relative; /* For positioning the toggle button */
+}
+
+.nav-toggle {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.nav-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: var(--text-color);
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+#nav-menu {
+  display: flex; /* Default to flex for larger screens */
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--gap-medium);
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex; /* Show toggle button on smaller screens */
+    position: absolute;
+    right: var(--padding-medium);
+    top: 10px;
+  }
+
+  #nav-menu {
+    display: none; /* Hide menu by default on mobile */
+    flex-direction: column; /* Stack items vertically */
+    position: absolute;
+    top: 50px; /* Adjust based on your header height */
+    right: 0;
+    background: var(--accent-color);
+    width: 100%; /* Full width on mobile */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--box-shadow-color);
+    padding: var(--padding-small) 0; /* Padding for the menu */
+    z-index: 1; /* Keep it above other elements */
+  }
+
+  #nav-menu.show {
+    display: flex; /* Show menu when toggled */
+  }
+
+  nav ul li {
+    text-align: center; /* Center text for mobile */
+  }
+}
+
 nav ul {
   list-style: none;
   padding: 0;

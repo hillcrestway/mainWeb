@@ -5,4 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
   menuToggle.addEventListener('click', function () {
     navLinks.classList.toggle('show');
   });
+
+  // Close the menu when a link is clicked
+  navLinks.addEventListener('click', function (event) {
+    if (event.target.tagName === 'A') {
+      navLinks.classList.remove('show');
+    }
+  });
 });

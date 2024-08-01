@@ -60,10 +60,10 @@ nav {
   box-shadow: 0 4px 6px var(--box-shadow-color);
   margin-top: -20px;
   border-radius: 8px;
-  padding: var(--padding-small);
   display: flex;
-  justify-content: center;
-  gap: var(--gap-medium);
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-small);
 }
 
 nav ul {
@@ -73,6 +73,7 @@ nav ul {
   justify-content: center;
   flex-wrap: wrap;
   gap: var(--gap-medium);
+  margin: 0;
 }
 
 nav ul li {
@@ -94,6 +95,29 @@ nav ul li a:focus {
   color: var(--accent-color);
   border-radius: 4px;
   outline: var(--focus-outline-color);
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .hamburger,
+.menu-toggle .hamburger::before,
+.menu-toggle .hamburger::after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-color);
+  border-radius: 3px;
+  transition: var(--transition-duration);
+}
+
+.menu-toggle .hamburger::before,
+.menu-toggle .hamburger::after {
+  margin-top: 5px;
 }
 
 main {
@@ -206,21 +230,21 @@ footer p {
   }
 
   nav {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
   }
 
   nav ul {
     flex-direction: column;
-    gap: var(--gap-small);
+    display: none;
+    width: 100%;
   }
 
-  main {
-    padding: var(--padding-small) 0;
+  nav ul.show {
+    display: flex;
   }
 
-  section {
-    padding: var(--padding-small);
+  .menu-toggle {
+    display: flex;
   }
 }
 

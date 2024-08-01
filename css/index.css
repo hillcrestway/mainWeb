@@ -101,6 +101,7 @@ nav ul li a:focus {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent; /* Prevents the grey highlight on iOS */
 }
 
 .menu-toggle .hamburger {

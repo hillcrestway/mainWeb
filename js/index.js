@@ -12,4 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
       navLinks.classList.remove('show');
     }
   });
+
+  // Prevent touch delay in Safari
+  menuToggle.addEventListener('touchstart', function () {}, { passive: true });
 });

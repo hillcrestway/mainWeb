@@ -1,12 +1,12 @@
 :root {
-  --primary-color: #2575fc;
-  --secondary-color: #6a11cb;
+  --primary-color: #e44b1a;
+  --secondary-color: #151515;
   --background-color: #f9f9f9;
   --text-color: #333;
-  --heading-color: #2575fc;
+  --heading-color: #e44b1a;
   --accent-color: #fff;
   --box-shadow-color: rgba(0, 0, 0, 0.1);
-  --focus-outline-color: #ffeb3b;
+  --focus-outline-color: #151515;
   --padding-large: 2.5rem;
   --padding-medium: 1.5rem;
   --padding-small: 1rem;
@@ -163,7 +163,7 @@ img {
 
 footer {
   background: #0a0606;
-  color: var(--accent-color);
+  color: #e44b1a;
   text-align: center;
   padding: var(--padding-medium) 0;
   margin-top: var(--gap-large);

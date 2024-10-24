@@ -37,8 +37,6 @@ header .logo h1 {
 /* Desktop Navigation */
 nav ul.desktop {
     list-style: none;
-    display: -webkit-box; /* Safari */
-    display: -ms-flexbox; /* Older IE */
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -64,7 +62,6 @@ nav ul.desktop li a:hover {
 /* Mobile Navigation */
 nav ul.mobile {
     display: none;
-    -webkit-flex-direction: column; /* Safari */
     flex-direction: column;
     justify-content: center;
     background-color: rgb(0, 0, 0);
@@ -101,12 +98,6 @@ nav ul.mobile li a:hover {
     background-color: transparent;
     border: none;
     padding: 10px;
-}
-
-/* Show mobile menu when the 'show' class is toggled */
-nav ul.mobile.show {
-    display: flex;
-    -webkit-display: flex;
 }
 
 /* Hero Section */
@@ -230,11 +221,6 @@ nav ul.mobile.show {
 .company p {
     color: #7f8c8d;
     line-height: 1.5;
-}
-
-.minilogo {
-    height: 300px;
-    width: 300px;
 }
 
 /* Services Section */
